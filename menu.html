@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TastyBites | Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #fff8f0, #ffe0b2);
+      color: #333;
+    }
+    header {
+      background: #4a2c2a;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      color: #ffcc80;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc80;
+    }
+    .menu-section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .menu-section h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      color: #4a2c2a;
+      border-bottom: 2px solid #4a2c2a;
+      display: inline-block;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .menu-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-content {
+      padding: 1rem;
+    }
+    .menu-content h3 {
+      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+      color: #4a2c2a;
+    }
+    .menu-content p {
+      font-size: 0.95rem;
+    }
+    .price {
+      color: #e65100;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    footer {
+      background: #4a2c2a;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="logo">
+      <h1>TastyBites</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservation</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="menu-section">
+    <h2>Our Special Menu🍕</h2>
+    <div class="menu-grid">
+      <!-- 15–20 Menu Items Recommended -->
+      <div class="menu-item">
+        <img src="https://cookingfromheart.com/wp-content/uploads/2017/03/Paneer-Tikka-Masala-4.jpg" alt="Paneer Tikka Massala">
+        <div class="menu-content">
+          <h3>Paneer Tikka Massala</h3>
+          <p>Grilled paneer cubes with spicy marinade.</p>
+          <div class="price">₹240</div>
+          <button class="order-btn" onclick="addToOrder('Paneer Tikka Massalan', 240)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://www.spiceroots.com/spiceroots/wp-content/uploads/2008/05/butterchicken-1024x682-1.jpg" alt="Butter Chicken">
+        <div class="menu-content">
+          <h3>Butter Chicken</h3>
+          <p>Chicken in creamy tomato-based sauce.</p>
+          <div class="price">₹320</div>
+          <button class="order-btn" onclick="addToOrder('Butter Chicken', 320)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://saltedmint.com/wp-content/uploads/2024/01/Vegetable-Spring-Rolls-4-500x375.jpg" alt="Spring Rolls">
+        <div class="menu-content">
+          <h3>Veg Spring Rolls</h3>
+          <p>Stuffed rolls served crispy with sauce.</p>
+          <div class="price">₹150</div>
+          <button class="order-btn" onclick="addToOrder('Veg Spring Rolls', 150)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/01/white-sauce-pasta-1.jpg" alt="Pasta">
+        <div class="menu-content">
+          <h3>White Sauce Pasta</h3>
+          <p>Creamy pasta with herbs and vegetables.</p>
+          <div class="price">₹260</div>
+          <button class="order-btn" onclick="addToOrder('White Sauce Pasta', 260)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://simplyhomecooked.com/wp-content/uploads/2023/04/Margherita-Pizza-3.jpg" alt="Pizza">
+        <div class="menu-content">
+          <h3>Margherita Pizza</h3>
+          <p>Classic cheese pizza with tomato sauce.</p>
+          <div class="price">₹299</div>
+          <button class="order-btn" onclick="addToOrder('Margherita Pizza', 299)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg" alt="Burger">
+        <div class="menu-content">
+          <h3>Veggie Burger</h3>
+          <p>Loaded burger with patty and lettuce.</p>
+          <div class="price">₹190</div>
+          <button class="order-btn" onclick="addToOrder('Veggie Burger', 190)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://vismaifood.com/storage/app/uploads/public/e12/7b7/127/thumb__1200_0_0_0_auto.jpg" alt="Biryani">
+        <div class="menu-content">
+          <h3>Chicken Biryani</h3>
+          <p>Spicy basmati rice cooked with chicken.</p>
+          <div class="price">₹310</div>
+          <button class="order-btn" onclick="addToOrder('Chicken Biryani', 310)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://culinarydelightsandbeyond.com/wp-content/uploads/2023/03/dosa-5oF7d_hPJG4-scaled.jpg" alt="Dosa">
+        <div class="menu-content">
+          <h3>Masala Dosa</h3>
+          <p>South Indian crepe with potato masala.</p>
+          <div class="price">₹120</div>
+          <button class="order-btn" onclick="addToOrder('Masala Dosa', 210)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://recipes.timesofindia.com/thumb/61050397.cms?width=1200&height=900" alt="Samosa">
+        <div class="menu-content">
+          <h3>Samosa</h3>
+          <p>Fried pastry stuffed with spicy potatoes.</p>
+          <div class="price">₹50</div>
+          <button class="order-btn" onclick="addToOrder('Samosa', 50)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://sausagemaker.com/wp-content/uploads/Homemade-French-Fries_8.jpg" alt="Fries">
+        <div class="menu-content">
+          <h3>French Fries</h3>
+          <p>Crispy potato fries with seasoning.</p>
+          <div class="price">₹90</div>
+          <button class="order-btn" onclick="addToOrder('French Fries', 90)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt6emBs4NVbYfIJX66wa5MOq6d-2IOzXj2JA&s" alt="Salad">
+        <div class="menu-content">
+          <h3>Caesar Salad</h3>
+          <p>Fresh greens with Caesar dressing.</p>
+          <div class="price">₹170</div>
+          <button class="order-btn" onclick="addToOrder('Caesar Salads', 170)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://cdn.mygingergarlickitchen.com/images/800px/800px-veg-chezwan-noodles-recipe-9.jpg" alt="Noodles">
+        <div class="menu-content">
+          <h3>Veg Noodles</h3>
+          <p>Stir-fried noodles with vegetables.</p>
+          <div class="price">₹200</div>
+          <button class="order-btn" onclick="addToOrder('Veg Noodles', 200)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKQxw5DJvhhpkBCpmKZUk_zL2bx3GFlmeBqQ&s" alt="Cake">
+        <div class="menu-content">
+          <h3>Chocolate Cake</h3>
+          <p>Rich Chocolate Cakeponge cake with chocolate icing.</p>
+          <div class="price">₹160</div>
+          <button class="order-btn" onclick="addToOrder('Chocolate Cake', 160)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://www.cuisinart.co.uk/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-uk-cuisinart-sfra-Library/default/dw02d70fe5///images/recipes/classic-vanilla-ice-cream.jpg?sw=1200&sh=1200&sm=fit" alt="Ice Cream">
+        <div class="menu-content">
+          <h3>Vanilla Ice Cream</h3>
+          <p>Classic vanilla flavor scoop.</p>
+          <div class="price">₹100</div>
+          <button class="order-btn" onclick="addToOrder('Vanilla Ice Cream', 100)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm2OG0_gtaSszXVIe4PyHJA67uqSVmI4IvjA&s" alt="Juice">
+        <div class="menu-content">
+          <h3>Fresh Orange Juice</h3>
+          <p>Cold-pressed orange juice.</p>
+          <div class="price">₹80</div>
+          <button class="order-btn" onclick="addToOrder('Fresh Orange Juic', 80)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://www.cuisinart.com/dw/image/v2/ABAF_PRD/on/demandware.static/-/Sites-us-cuisinart-sfra-Library/default/dw2ca0aa66/images/recipe-Images/cafe-latte1-recipe.jpg?sw=1200&sh=1200&sm=fit" alt="Coffee">
+        <div class="menu-content">
+          <h3>Café Latte</h3>
+          <p>Espresso mixed with steamed milk.</p>
+          <div class="price">₹120</div>
+          <button class="order-btn" onclick="addToOrder('Café Latte', 120)">Add to Order</button>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJkOH8DNNVnCZ9avKFax1bSkWVlrbLOjVZpg&s" alt="Mocktail">
+        <div class="menu-content">
+          <h3>Mint Mojito</h3>
+          <p>Chilled lime and mint refresher.</p>
+          <div class="price">₹110</div>
+          <button class="order-btn" onclick="addToOrder('Mint Mojito', 110)">Add to Order</button>
+        </div>
+      </div>
+
+      <!-- 18 total unique dishes shown -->
+
+    </div>
+    <div style="text-align:center; margin-top: 2rem;">
+  <button onclick="loadMore()" style="padding: 0.8rem 2rem; background-color: #4a2c2a; color: white; border: none; border-radius: 25px; font-size: 1rem; cursor: pointer;">View More</button>
+</div>
+
+<!-- 👇 Insert this just below the above block -->
+<!-- ✅ Place Order Button -->
+<div style="text-align:center; margin-top: 1rem;">
+<button onclick="placeOrder()" style="padding: 0.8rem 2rem; background-color: green; color: white; border: none; border-radius: 25px; font-size: 1rem; cursor: pointer;">Place Order</button>
+<button onclick="viewCart()" style="padding: 0.8rem 2rem; background-color: #e65100; color: white; border: none; border-radius: 25px; font-size: 1rem; cursor: pointer;">View Cart</button>
+</div>
+ </section>
+
+ <!-- Order Form Popup -->
+<div id="orderFormPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000;">
+  <div style="background: #fff; padding: 2rem; max-width: 400px; margin: 10% auto; border-radius: 10px; position: relative;">
+    <h3 style="margin-bottom: 1rem; text-align: center;">Enter Your Details</h3>
+    <input type="text" id="userName" placeholder="Your Name" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" required>
+    <input type="tel" id="userPhone" placeholder="Phone Number" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" required>
+    <textarea id="userAddress" placeholder="Delivery Address" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" rows="3" required></textarea>
+    
+    <button onclick="submitOrder()" style="background: green; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; width: 100%;">Submit Order</button>
+    
+    <button onclick="closeForm()" style="background: #ccc; color: black; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; margin-top: 0.5rem; width: 100%;">Cancel</button>
+  </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TastyBites. All rights reserved.</p>
+  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let extraDishesLoaded = false;
+
+    window.loadMore = function () {
+      if (extraDishesLoaded) return;
+
+      const grid = document.querySelector('.menu-grid');
+      const extraItems = `
+        <div class="menu-item">
+          <img src="https://www.onceuponachef.com/images/2021/02/Tomato-Soup-3-1200x1800.jpg" alt="Soup">
+          <div class="menu-content">
+            <h3>Tomato Soup</h3>
+            <p>Classic warm tomato soup with herbs.</p>
+            <div class="price">₹120</div>
+            <button class="order-btn" onclick="addToOrder('Tomato Soup', 120)">Add to Order</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://www.allrecipes.com/thmb/dOTb-yf_t1CXgw91lg69Wvzrl8E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-162760-fluffy-pancakes-DDMFS-beauty-3x4-35d4b54b54464701b32870d4b1646bfe.jpg" alt="Pancakes">
+          <div class="menu-content">
+            <h3>Fluffy Pancakes</h3>
+            <p>Stacked pancakes served with syrup.</p>
+            <div class="price">₹150</div>
+            <button class="order-btn" onclick="addToOrder('Fluffy Pancakes', 150)">Add to Order</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://priyakitchenette.com/wp-content/uploads/2013/09/grilled-bombay-sandwich11.jpg" alt="Grilled Sandwich">
+          <div class="menu-content">
+            <h3>Grilled Sandwich</h3>
+            <p>Stuffed bread grilled to perfection.</p>
+            <div class="price">₹140</div>
+            <button class="order-btn" onclick="addToOrder('Grilled Sandwich', 140)">Add to Order</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://cdn.foodfanatic.com/uploads/2016/05/falooda-photo.jpg" alt="Falooda">
+          <div class="menu-content">
+            <h3>Rose Falooda</h3>
+            <p>Sweet dessert drink with basil seeds.</p>
+            <div class="price">₹130</div>
+            <button class="order-btn" onclick="addToOrder('Rose Falooda', 130)">Add to Order</button>
+          </div>
+        </div>
+      `;
+      grid.insertAdjacentHTML('beforeend', extraItems);
+      extraDishesLoaded = true;
+    };
+  });
+  function orderNow(itemName) {
+    alert("Thanks for ordering " + itemName + "! Our team will contact you soon.");
+  }
+  let cart = [];
+
+function addToOrder(itemName, itemPrice) {
+  cart.push({ name: itemName, price: itemPrice });
+  alert(itemName + " added to order!");
+}
+
+function viewCart() {
+  if (cart.length === 0) {
+    alert("Your cart is empty.");
+    return;
+  }
+
+  let message = "🛒 Your Order:\n\n";
+  let total = 0;
+  cart.forEach((item, index) => {
+    message += `${index + 1}. ${item.name} - ₹${item.price}\n`;
+    total += item.price;
+  });
+  message += `\nTotal: ₹${total}`;
+  alert(message);
+}
+function placeOrder() {
+  if (cart.length === 0) {
+    alert("Please add items to your order first.");
+    return;
+  }
+
+  let customerName = prompt("Enter your name:");
+  if (!customerName) return;
+
+  let phone = prompt("Enter your phone number:");
+  if (!phone) return;
+
+  let address = prompt("Enter your address:");
+  if (!address) return;
+
+  let orderSummary = `✅ Thank you, ${customerName}!\n\n📦 Your Order:\n`;
+  let total = 0;
+  cart.forEach((item, index) => {
+    orderSummary += `${index + 1}. ${item.name} - ₹${item.price}\n`;
+    total += item.price;
+  });
+
+  orderSummary += `\nTotal Amount: ₹${total}\n📞 Phone: ${phone}\n📍 Address: ${address}\n\nWe'll contact you shortly.`;
+  alert(orderSummary);
+  cart = []; // clear cart
+}
+</script>

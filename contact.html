@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TastyBites | Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://plus.unsplash.com/premium_photo-1671650123234-85096b81babe?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+      color: #fff;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+      z-index: 0;
+    }
+
+    header, footer, .contact-section {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      background: #4a2c2a;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      color: #ffcc80;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc80;
+    }
+
+    .contact-section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact-details, .contact-form {
+      flex: 1 1 300px;
+    }
+
+    .contact-details h2 {
+      font-family: 'Playfair Display', serif;
+      color: #ffcc80;
+      margin-bottom: 1rem;
+    }
+
+    .contact-details p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #4a2c2a;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6d3c38;
+    }
+
+    .contact-image {
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #4a2c2a;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="logo">
+      <h1>TastyBites</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservation</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-details">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 123 Foodie Street, Flavor Town, India</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> contact@tastybites.com</p>
+      <img src="https://coucoubyoberoi.com/images/contactusnew%20.jpg" alt="Contact Us" class="contact-image">
+    </div>
+    <div class="contact-form">
+      <form onsubmit="event.preventDefault(); alert('Thanks for reaching out! We will contact you shortly.');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TastyBites. All rights reserved.</p>
+  </footer>
+</body>
+</html>

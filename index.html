@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasty Bites😋 | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #fff8f0, #ffe0b2);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #4a2c2a;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      color: #ffcc80;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc80;
+    }
+    #hero {
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .hero-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      color: #fff;
+      max-width: 600px;
+    }
+    .hero-box h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-box p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: #ff9800;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #e65100;
+    }
+    footer {
+      background: #4a2c2a;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="logo">
+      <h1>TastyBites</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservation</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-box">
+      <h2>Delicious Food Delivered With Love</h2>
+      <p>Explore our handcrafted menu and reserve your table today!</p>
+      <a href="menu.html" class="btn">View Menu</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TastyBites. All rights reserved.</p>
+  </footer>
+</body>
+</html>
